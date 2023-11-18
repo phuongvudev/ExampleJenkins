@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1210"
-   version = "1.3">
+   LastUpgradeVersion = "1500"
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D03A3A552B08ABAD004A36D0"
+               BuildableName = "ExampleJenkinsStg.app"
+               BlueprintName = "ExampleJenkinsStg"
+               ReferencedContainer = "container:ExampleJenkins.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -26,22 +40,11 @@
       buildConfiguration = "ProdDebug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ExampleJenkinsTests.xctest"
-               BlueprintName = "ExampleJenkinsTests"
-               ReferencedContainer = "container:ExampleJenkins.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
-      buildConfiguration = "ProdDebug"
+      buildConfiguration = "StgDebug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -50,13 +53,31 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "cp &quot;${PROJECT_DIR}/../env/.env.stg&quot; &quot;${PROJECT_DIR}/../env/.env.stg&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+                     BuildableName = "ExampleJenkins.app"
+                     BlueprintName = "ExampleJenkins"
+                     ReferencedContainer = "container:ExampleJenkins.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ExampleJenkins.app"
-            BlueprintName = "ExampleJenkins"
+            BlueprintIdentifier = "D03A3A552B08ABAD004A36D0"
+            BuildableName = "ExampleJenkinsStg.app"
+            BlueprintName = "ExampleJenkinsStg"
             ReferencedContainer = "container:ExampleJenkins.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,12 +92,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ExampleJenkins.app"
-            BlueprintName = "ExampleJenkins"
+            BlueprintIdentifier = "D03A3A552B08ABAD004A36D0"
+            BuildableName = "ExampleJenkinsStg.app"
+            BlueprintName = "ExampleJenkinsStg"
             ReferencedContainer = "container:ExampleJenkins.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D03A3A552B08ABAD004A36D0"
+            BuildableName = "ExampleJenkinsStg.app"
+            BlueprintName = "ExampleJenkinsStg"
+            ReferencedContainer = "container:ExampleJenkins.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "ProdDebug">
