@@ -6,17 +6,17 @@ apply plugin: "com.facebook.react"
  */
 
 project.ext.envConfigFiles = [
-        devRelease : "./env/.env.dev",
-        devDebug   : "./env/.env.dev",
+        devRelease : "../env/.env.dev",
+        devDebug   : "../env/.env.dev",
 
-        prodDebug  : "./env/.env.prod",
-        prodRelease: "./env/.env.prod",
+        prodDebug  : "../env/.env.prod",
+        prodRelease: "../env/.env.prod",
 
-        stgRelease : "./env/.env.stg",
-        stgDebug   : "./env/.env.stg",
+        stgRelease : "../env/.env.stg",
+        stgDebug   : "../env/.env.stg",
 
-        uatRelease : "./env/.env.uat",
-        uatDebug   : "./env/.env.uat"
+        uatRelease : "../env/.env.uat",
+        uatDebug   : "../env/.env.uat"
 ]
 
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
@@ -95,7 +95,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     signingConfigs {
         debug {
